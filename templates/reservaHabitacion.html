@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reservaHabitacion.css')}}">
+</head>
+
+<body>
+    <main>
+        <form action="/reservas" method="post">
+
+            <h1>bienvenido al hotel budapest</h1>
+            <p>por favor llene el formulario correctamente</p>
+
+            <div>
+                <!-- <label for="habitacion">Cual habitación desea</label>
+                <select name="habitacion" id="habitacion" required>
+                    <option hidden>Escoja la habitación</option>
+                    <option value="habitación 1" {%if false%}disabled{%endif%}>habitacion 1</option>
+                    <option value="habitación 2">habitacion 2</option>
+                    <option value="habitación 3">habitacion 3</option>
+                    <option value="habitación 4">habitacion 4</option>
+                    <option value="habitación 5">habitacion 5</option>
+                    <option value="habitación 6">habitacion 6</option>
+                </select> -->
+                {{form.habitacion.label}}
+                {{form.habitacion}}
+            </div>
+
+            <div>
+                <!-- <label for="dias">Cuantos dias se va a quedar</label>
+                <input type="number" name="dias" id="dias" required> -->
+                {{form.dias.label}}
+                {{form.dias}}
+            </div>
+
+            <div>
+                <!-- <label for="comentarios">¿Desea dejar alguna recomendacion?</label>
+                <textarea name="comentarios" id="comentarios" cols="20" rows="4" aria-multiline="true"
+                    required></textarea> -->
+                {{form.comentarios.label}}
+                {{form.comentarios}}
+
+            </div>
+
+            <button type="submit">Reservar</button>
+            <button><a href="/">Volver a pagina principal</a></button>
+        </form>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(14, 96, 119);
+    color: white;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main h1 {
+    font-size: 4rem;
+}
+
+main a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+    box-shadow: 0 0 2px 10px rgb(49, 122, 223);
+}
+
+main a:hover {
+    background-color: black;
+    color: white;
+}

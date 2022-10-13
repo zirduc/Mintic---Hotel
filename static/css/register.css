@@ -1,0 +1,171 @@
+:root {
+    --font-color: black;
+    --font-color-link: white;
+    --backgroundcolor-main: linear-gradient(4deg, rgba(158, 183, 199, 0.9640231092436975) 0%, rgba(52, 179, 173, 0.9948354341736695) 43%, rgba(61, 75, 74, 1) 100%);
+    --backgroundcolor-form: radial-gradient(circle, rgba(199, 158, 199, 1) 0%, rgba(52, 99, 179, 0.9948354341736695) 43%, rgba(61, 75, 74, 1) 100%);
+    --background-input-button: white;
+    --border-color: white;
+    --hover-color: green;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.auth-page {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* padding: 0 20px; */
+    background: var(--backgroundcolor-main);
+}
+
+.principal-login {
+    /* height: 70%; */
+    background: var(--backgroundcolor-form);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border-radius: 20px;
+
+}
+
+.auth-page form {
+    display: grid;
+    max-width: 800px;
+    /* height: 70%; */
+    grid-template-rows: 2rem 4rem 2rem;
+    row-gap: 1rem;
+    padding: 20px;
+    position: relative;
+
+}
+
+.auth-page form label {
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.auth-page form span {
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+}
+
+
+.auth-page form input {
+    height: 4rem;
+    font-size: 2.5rem;
+    width: 100%;
+    padding-left: 8px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.auth-page form label input:hover {
+    border: 3px ridge black;
+}
+
+.button-link {
+    display: grid;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.button-link a {
+    font-size: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.button-link a:hover {
+    font-size: 2.7rem;
+    color: black;
+}
+
+.auth-page button {
+    font-size: 3rem;
+    height: 6rem;
+    width: 12rem;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+.auth-page button:hover {
+    background-color: purple;
+}
+
+
+.auth-page .button-provider {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 8vh;
+    border-radius: 100%;
+    height: 6rem;
+    width: 6rem;
+}
+
+.button-provider img {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.auth-page .facebook {
+    left: 16%;
+
+}
+
+.google {
+    right: 16%;
+}
+
+
+
+@media (max-height: 800px) {
+    .principal-login {
+        height: 90vh;
+    }
+
+    a {
+        position: absolute;
+        bottom: -6vh;
+    }
+
+    .auth-page input {
+        font-size: 1.5rem;
+    }
+
+    .auth-page .a-register {
+        bottom: -60px;
+        font-size: 2rem;
+    }
+
+    .auth-page .a-register:hover {
+        font-size: 2.2rem;
+    }
+
+    .auth-page .register {
+        position: absolute;
+        bottom: -20px;
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+}
